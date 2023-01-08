@@ -5,7 +5,11 @@ const addCycle = require('../controllers/addCycle.controller');
 const searchCycle = require('../controllers/searchCycle.controller');
 const updateCycles = require('../controllers/updateCycle.controller');
 // const uploadBulkData = require('../controllers/bulkUpload.controller');
+const deleteUser = require('../controllers/deleteUser.controller');
 
+// const methodOverride = require('method-override');
+
+// router.use(methodOverride('_method'));
 
 router.get('/cycle',
         getAllCycles);
@@ -20,8 +24,11 @@ router.put('/updateCycle',
                 updateCycles);
 
 // router.post('/uploadFile', 
-//                 uploadBulkData);               
+//                 uploadBulkData); 
+// router.delete('/deleteData',
+//                 deleteUser);   
 
+router.delete('/deleteData', 
+        deleteUser);
                 
-
 module.exports = router;

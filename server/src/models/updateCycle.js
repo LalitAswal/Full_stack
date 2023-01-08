@@ -1,7 +1,6 @@
-const { query, connect } = require('../config/database');
 var connection = require('../config/database');
 
-let updateCycle = async(name, idhockey)=>{
+let updateCycle = async(Name, age, Country, Gender, weight, height, idhockey)=>{
     const qry = `update  player.hockey set name = ? where idhockey =?`;
     const result = await connection.promise().query(qry,[name, idhockey]);
     console.log('checking --', result[0]['changedRows'])

@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import '../component/navbar.css'
+import '../component/navbar.css';
 
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
@@ -28,6 +28,11 @@ const AllUsers = () => {
                 <th>height</th>
                 <th>weight</th>
                 <th>Gender</th>
+                <th>Edit</th>
+                <th>
+
+                <button type='submit'>Remove</button>
+                </th>
               </tr>
               {
 
@@ -40,6 +45,12 @@ const AllUsers = () => {
                 <td>{ele.height}</td>
                 <td>{ele.age}</td>
                 <td>{ele.Gender ==="1"? "male":"Female"}</td>
+                <button> click</button>
+                <td>
+
+                <input type="checkbox" />
+                </td>
+
               </tr>
               
               )
